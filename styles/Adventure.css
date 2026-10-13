@@ -1,0 +1,810 @@
+/* ================= BACKGROUND VIDEO ================= */
+
+.background-video {
+
+    position: fixed;
+
+    top: 100px;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -2;
+}
+
+
+/* ================= VIDEO OVERLAY ================= */
+
+.video-overlay {
+
+    position: fixed;
+
+    top: 15px;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: -1;
+}
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #020811;
+    color: white;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 82%;
+    height: 75px;
+
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 25px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    border: 1px solid #009dff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 10px #008cff,
+        inset 0 0 10px rgba(0, 153, 255, 0.2);
+}
+
+
+
+/* ================= LOGO ================= */
+
+.logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+}
+
+
+
+/* ================= NAV LINKS ================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    padding: 10px 5px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 10px #00aaff;
+}
+
+
+
+/* ACTIVE LINK */
+
+.nav-links a.active {
+    color: #00aaff;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: #00aaff;
+
+    box-shadow: 0 0 8px #00aaff;
+}
+
+
+
+/* ================= SEARCH BOX ================= */
+
+.Search-Box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.Search-Box input {
+    width: 205px;
+
+    height: 36px;
+
+    padding: 8px 12px;
+
+    font-size: 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    color: #222;
+}
+
+.Search-Box button {
+    width: 48px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #009fe3;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.Search-Box button:hover {
+    background: #00c3ff;
+
+    box-shadow: 0 0 12px #00aaff;
+}
+
+
+
+/* ================= ACTION HERO ================= */
+
+.action-hero {
+    min-height: 800px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("../assets/images/image.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding-top: 100px;
+}
+
+
+
+/* HERO CONTENT */
+
+.hero-overlay {
+    max-width: 750px;
+
+    padding: 40px;
+}
+
+.hero-overlay h1 {
+    font-size: 65px;
+
+    color: white;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 10px #008cff,
+        0 0 25px #008cff,
+        0 0 45px #005eff;
+
+    margin-bottom: 20px;
+}
+
+.hero-overlay p {
+    color: #d6eaff;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+/* ================= ADVENTURE HERO ================= */
+
+.adventure-hero {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background: #080d16;
+}
+
+
+/* Background Video */
+
+.adventure-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* Video Overlay */
+
+.adventure-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 1;
+}
+
+
+/* Hero Content */
+
+.adventure-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 800px;
+
+    padding: 30px;
+}
+
+.adventure-content h1 {
+    font-size: 60px;
+    font-weight: 800;
+
+    color: white;
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 10px #00aaff,
+        0 0 20px #00aaff,
+        0 0 40px #0066ff;
+
+    margin-bottom: 22px;
+}
+
+.adventure-content p {
+    color: #eeeeee;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* ================= GAMES SECTION ================= */
+
+.games-section {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: 60px auto;
+    padding: 20px 0;
+}
+
+
+/* Section Heading */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: #ffffff;
+
+    margin-bottom: 15px;
+
+    text-shadow: 0 0 12px rgba(0, 174, 255, 0.7);
+}
+
+.section-title p {
+    color: #b8c3d1;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ================= GAME CARDS CONTAINER ================= */
+
+.games-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+
+/* ================= INDIVIDUAL GAME CARD ================= */
+
+.game-card {
+    min-width: 0;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #0c121d;
+
+    border: 1px solid #202c3d;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00aeff;
+
+    box-shadow:
+        0 0 12px rgba(0, 174, 255, 0.3),
+        0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ================= GAME IMAGE ================= */
+
+.game-image {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+    background: #111827;
+}
+
+.game-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.07);
+}
+
+
+/* Game Category Badge */
+
+.game-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 12px;
+
+    background: rgba(0, 174, 255, 0.9);
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* ================= GAME CONTENT ================= */
+
+.game-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 22px;
+}
+
+.game-content h3 {
+    color: #ffffff;
+
+    font-size: 23px;
+    margin-bottom: 12px;
+
+    transition: color 0.3s ease;
+}
+
+.game-card:hover .game-content h3 {
+    color: #00aeff;
+}
+
+.game-content p {
+    color: #b8c3d1;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin-bottom: 22px;
+}
+
+
+/* ================= GAME BUTTONS ================= */
+
+.game-buttons {
+    display: flex;
+    gap: 12px;
+
+    margin-top: auto;
+}
+
+.game-buttons a {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 12px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+/* Download Button */
+
+.download-btn {
+    background: #00aeef;
+    color: #ffffff;
+
+    border: 1px solid #00aeef;
+}
+
+.download-btn:hover {
+    background: #0077ff;
+    border-color: #0077ff;
+
+    box-shadow: 0 0 12px rgba(0, 174, 255, 0.6);
+}
+
+
+/* Game Info Button */
+
+.info-btn {
+    background: transparent;
+    color: #00aeff;
+
+    border: 1px solid #00aeff;
+}
+
+.info-btn:hover {
+    background: #00aeff;
+    color: #ffffff;
+
+    box-shadow: 0 0 12px rgba(0, 174, 255, 0.5);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #111827;
+    color: white;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+
+/* Footer Tables */
+
+footer table {
+    border-collapse: collapse;
+}
+
+
+/* Footer Headings */
+
+footer h2 {
+    color: #00bfff;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* Footer Paragraphs */
+
+footer p {
+    color: #d1d5db;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Footer Lists */
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Footer Links */
+
+footer a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer a:hover {
+    color: #00bfff;
+    text-decoration: underline;
+}
+
+
+/* Social Media */
+
+footer table:nth-of-type(2) a {
+    color: white;
+    font-weight: bold;
+}
+
+footer table:nth-of-type(2) a:hover {
+    color: #00bfff;
+}
+
+
+/* Divider */
+
+footer hr {
+    border: none;
+    border-top: 1px solid #374151;
+    margin: 0;
+}
+
+
+/* Copyright */
+
+footer small {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        width: 95%;
+        padding: 12px 18px;
+    }
+
+    .games-section {
+        width: 94%;
+    }
+
+    .games-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .adventure-content h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* Mobile Phones */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 94%;
+        min-height: auto;
+
+        margin: 12px auto;
+        padding: 12px;
+
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .Search-Box {
+        width: 100%;
+    }
+
+    .adventure-hero {
+        height: 400px;
+    }
+
+    .adventure-content {
+        padding: 20px;
+    }
+
+    .adventure-content h1 {
+        font-size: 34px;
+        letter-spacing: 2px;
+
+        margin-bottom: 16px;
+    }
+
+    .adventure-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .games-section {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .section-title {
+        margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    .games-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .game-image {
+        height: 240px;
+    }
+
+    .game-content {
+        padding: 20px;
+    }
+
+    .game-content h3 {
+        font-size: 21px;
+    }
+
+    .game-buttons {
+        gap: 10px;
+    }
+
+    .footer {
+        margin-top: 45px;
+        padding: 35px 15px 18px;
+    }
+
+    .footer h2 {
+        font-size: 23px;
+    }
+
+}
+
+
+/* Small Mobile Screens */
+
+@media (max-width: 360px) {
+
+    .adventure-content h1 {
+        font-size: 29px;
+    }
+
+    .game-buttons {
+        flex-direction: column;
+    }
+
+    .game-buttons a {
+        width: 100%;
+    }
+
+}

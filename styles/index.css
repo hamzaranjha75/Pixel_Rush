@@ -1,0 +1,345 @@
+/* Remove white space from page */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ================= HERO / BANNER ================= */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../assets/images/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+
+
+    border-radius: 40%;
+    border-color: #0c0c0c;
+
+    object-fit: contain;
+
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+
+    z-index: 20;
+}
+
+/* ================= HERO HEADING ================= */
+
+.hero h1 {
+    color: rgb(14, 13, 13);
+    font-size: 50px;
+    background-color: rgb(248, 247, 247);
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 300px;
+    padding: 10px 20px;
+}
+
+.hero h1:hover {
+    background-color: rgb(64, 64, 250);
+    transform: scale(1.1);
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 20px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 25px;
+    margin: 15px;
+    border: 2px solid #008cff;
+    border-radius: 12px;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 15px;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+nav a:first-child {
+    color: #00aaff;
+    border-bottom: 2px solid #00aaff;
+}
+
+.Search-Box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Search-Box input {
+    width: 180px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #00aaff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.Search-Box button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+h3 {
+    text-align: center;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: x-large;
+    border-radius: 8px;
+
+}
+
+
+h3:hover {
+    background-color: rgb(64 64 250);
+    transform: scale(1.05);
+}
+
+/* ================= CART SECTION ================= */
+
+
+/* Main Game Cart Section */
+.cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+/* Game Image */
+.cart img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+/* Game Paragraph */
+.cart p {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+
+    text-align: center;
+    line-height: 1.6;
+    font-size: 17px;
+
+    overflow-wrap: break-word;
+}
+
+/* Buttons */
+.cart button {
+    width: 150px;
+    max-width: 100%;
+    padding: 12px;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #0c0c0c;
+    color: white;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.cart button:hover {
+    background-color: rgb(64, 64, 250);
+    transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .cart {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .cart img {
+        max-width: 100%;
+    }
+
+    .cart p {
+        flex-basis: 100%;
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .cart {
+        flex-direction: column;
+        width: 100%;
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    .cart img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cart p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .cart button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #111827;
+    color: white;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+
+/* Footer Tables */
+
+footer table {
+    border-collapse: collapse;
+}
+
+
+/* Footer Headings */
+
+footer h2 {
+    color: #00bfff;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* Footer Paragraphs */
+
+footer p {
+    color: #d1d5db;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Footer Lists */
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Footer Links */
+
+footer a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer a:hover {
+    color: #00bfff;
+    text-decoration: underline;
+}
+
+
+/* Social Media */
+
+footer table:nth-of-type(2) a {
+    color: white;
+    font-weight: bold;
+}
+
+footer table:nth-of-type(2) a:hover {
+    color: #00bfff;
+}
+
+
+/* Divider */
+
+footer hr {
+    border: none;
+    border-top: 1px solid #374151;
+    margin: 0;
+}
+
+
+/* Copyright */
+
+footer small {
+    color: #9ca3af;
+    font-size: 14px;
+}
